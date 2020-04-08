@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="/tinymce/tinymce.min.js"></script>
+
+  <script type="text/javascript">
+    var update = function(){
+      var pippo = tinymce.activeEditor.getContent();
+      document.querySelector("#destinazione").innerHTML = pippo;
+    }
+
+    tinymce.init({
+      selector: '.editor-area',
+      init_instance_callback: function(editor) {
+        update();
+        editor.on('Change', update);
+      },
+      width: 960,
+      height: 400,
+      content_css: "css/custom_content.css",
+      theme: "modern",
+      language: "it",
+      schema: "html5",
+      entity_encoding: "raw",
+      element_format: "html",
+
+      invalid_elements: "h1",
+
+      plugins: 'advlist anchor charmap code contextmenu hr image link lists media powerpaste searchreplace table visualblocks visualchars wordcount ',
+      menubar: false,
+      toolbar1: 'code | bold italic underline strikethrough | superscript subscript | styleselect | removeformat | charmap | undo redo',
+      toolbar2: 'copy cut paste | numlist bullist | hr | link unlink anchor | image media table',
+
+      mobile: {
+        theme: 'mobile',
+        plugins: ['styleselect'],
+        toolbar: ['undo', 'bold', 'italic', 'styleselect']
+      },
+
+      powerpaste_allow_local_images: false,
+      powerpaste_word_import: "clean",
+      powerpaste_html_import: "clean",
+      visualblocks_default_state: true,
+
+      link_class_list: [{
+          title: "Nessuna",
+          value: ""
+        },
+        {
+          title: "Evidenza",
+          value: "hilite"
+        },
+        {
+          title: "Inattivo",
+          value: "dimmed"
+        }
+      ],
+      link_title: true,
+
+      image_caption: true,
+      image_advtab: false,
+      image_class_list: [{
+          title: 'Nessuna',
+          value: ''
+        },
+        {
+          title: 'Stile uno',
+          value: 'img-classe1'
+        },
+        {
+          title: 'Stile due',
+          value: 'img-classe2'
+        }
+      ],
+
+      style_formats: [{
+          title: "Intestazione 2",
+          block: "h2"
+        },
+        {
+          title: "Intestazione 3",
+          block: "h3"
+        },
+        {
+          title: "Intestazione 4",
+          block: "h4"
+        },
+        {
+          title: "Intestazione 5",
+          block: "h5"
+        },
+        {
+          title: "Paragrafo",
+          block: "p"
+        },
+        {
+          title: "Blocco div",
+          block: "div"
+        },
+        {
+          title: "Preformattato",
+          block: "pre"
+        },
+        {
+          title: 'Testo evidenziato',
+          items: [{
+              title: "Evidenziato rosso",
+              inline: "span",
+              classes: 'evidenza_rosso',
+              styles: {
+                color: '#ff0000'
+              },
+            },
+            {
+              title: "Evidenziato blu",
+              inline: "span",
+              classes: 'evidenza_blu'
+            }
+          ]
+        },
+      ],
+      /*
+            external_filemanager_path:"/fmlocal/",
+            filemanager_title:"File manager" ,
+            external_plugins: { "filemanager" : "/fmlocal/plugin.min.js"},
+      */
+    });
+  </script>
+
+  <style media="screen">
+    #destinazione {
+      width: 960px;
+      border: 1px solid red;
+      padding: 32px 70px 50px 20px;
+      box-sizing: border-box;
+      margin-top: 30px;
+    }
+
+    .evidenza_rosso {
+      color: red;
+      font-weight: bold;
+    }
+
+    .evidenza_blu {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+
+<body>
+  <textarea class="editor-area">
+
+    <h2>Questo è un sito di prova per testare l'editor <strong>tinymce</strong>.</h2>
+    <p>Questo è un paragrafo. Qui sotto viene visualizzato il risultato.</p>
+    <h3>Ci possono essere:</h3>
+    <ul>
+    <li>elenchi disordinati</li>
+    <li>e caotici</li>
+    </ul>
+    <ol>
+    <li>oppure ordinati</li>
+    <li>e composti</li>
+    </ol>
+    <p><a href="https://www.unifi.it/" target="_blank" rel="noopener">link normali</a> oppure <a class="hilite" href="https://www.unifi.it/" target="_blank" rel="noopener">link in evidenza</a> oppure <a class="dimmed" href="https://www.unifi.it/" target="_blank" rel="noopener">link disattivati</a></p>
+    <p> </p>
+
+  </textarea>
+  <div id="destinazione">
+</body>
+
+</html>

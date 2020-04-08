@@ -1,0 +1,14 @@
+body, td, pre {
+  color: #000;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 8px;
+}
+
+.evidenza_rosso {
+  color: red;
+  font-weight: bold;
+}
+.evidenza_blu {
+  color: blue;
+  font-weight: bold;
