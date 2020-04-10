@@ -5,7 +5,7 @@
   <meta charset=“UTF-8”>
   <title>UNIFI TINYMCE</title>
 
-  <script src="tinymce/tinymce.min.js"></script>
+  <script src="./tinymce/tinymce.min.js"></script>
 
   <script type="text/javascript">
     var update = function() {
@@ -20,8 +20,9 @@
         editor.on('Change', update);
       },
       width: 960,
-      height: 400,
-      content_css: "css/custom_content.css",
+      height: 900,
+      content_css: "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027, ./css/custom_content.css",
+      body_class: 'content-right',
       theme: "modern",
       language: "it",
       schema: "html5",
@@ -169,23 +170,22 @@
     }
 
     #destinazione {
-      width: 960px;
       border: 1px solid red;
-      padding: 32px 70px 50px 20px;
       box-sizing: border-box;
       margin-top: 30px;
     }
   </style>
 
+  <link rel="stylesheet" href="https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027">
   <link rel="stylesheet" href="css/custom_content.css">
 
 </head>
 
 <body>
   <div id="container">
-    <textarea class="editor-area">
+    <textarea class="editor-area content-right">
 
-      <h2>Questo è un sito di prova per testare l'editor <strong>tinymce</strong>. Questo è un h2.</h2>
+      <h2>Questo è un h2.</h2>
       <table>
       <thead>
       <tr>
@@ -248,7 +248,7 @@
       <p>oppure <a class="hilite" href="https://www.unifi.it/" target="_blank" rel="noopener">link in evidenza</a></p>
       <p>oppure <a class="dimmed" href="https://www.unifi.it/" target="_blank" rel="noopener">link disattivati</a></p>
   </textarea>
-    <div id="destinazione">
+    <div id="destinazione" class="content-right">
     </div>
   </div>
 </body>

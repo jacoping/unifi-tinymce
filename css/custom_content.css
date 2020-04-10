@@ -1,31 +1,29 @@
-body, td, pre {
-  color: #000;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  margin: 8px;
+/* questo c'è già ma è su .unit quindi non me lo prendeva
+*/
+
+.content-right {
+  padding-left: 1.3em;
 }
 
-.hilite {
-  background-color: red;
-}
 
-.dimmed {
-  background-color: grey;
-}
 
-.evidenza_rosso {
+/* questo c'è già ma è su .unit quindi non me lo prendeva
+*/
+span.evidenza_rosso {
+  font-weight: 700;
   color: red;
-  font-weight: bold;
 }
-.evidenza_blu {
+span.evidenza_blu {
+  font-weight: 700;
   color: blue;
-  font-weight: bold
 }
 
 table {
   border-collapse: collapse;
   border-top: 1px solid black;
   width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 thead, td, th {
