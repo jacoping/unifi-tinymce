@@ -2,6 +2,9 @@
 <html>
 
 <head>
+  <meta charset=“UTF-8”>
+  <title>UNIFI TINYMCE</title>
+
   <script src="tinymce/tinymce.min.js"></script>
 
   <script type="text/javascript">
@@ -87,10 +90,6 @@
           block: "h4"
         },
         {
-          title: "Intestazione 5",
-          block: "h5"
-        },
-        {
           title: "Paragrafo",
           block: "p"
         },
@@ -101,6 +100,10 @@
         {
           title: "Preformattato",
           block: "pre"
+        },
+        {
+          title: "Blockquote",
+          block: "blockquote"
         },
         {
           title: 'Testo evidenziato',
@@ -129,6 +132,10 @@
   </script>
 
   <style media="screen">
+    #container {
+      width: 960px;
+      margin: auto;
+    }
     #destinazione {
       width: 960px;
       border: 1px solid red;
@@ -137,38 +144,62 @@
       margin-top: 30px;
     }
 
-    .evidenza_rosso {
-      color: red;
-      font-weight: bold;
-    }
-
-    .evidenza_blu {
-      color: blue;
-      font-weight: bold;
-    }
   </style>
+
+  <link rel="stylesheet" href="css/custom_content.css">
 
 </head>
 
 <body>
+  <div id="container">
   <textarea class="editor-area">
 
-    <h2>Questo è un sito di prova per testare l'editor <strong>tinymce</strong>.</h2>
-    <p>Questo è un paragrafo. Qui sotto viene visualizzato il risultato.</p>
-    <h3>Ci possono essere:</h3>
-    <ul>
-    <li>elenchi disordinati</li>
-    <li>e caotici</li>
-    </ul>
+    <h2>Questo è un sito di prova per testare l'editor <strong>tinymce</strong>. Questo è un h2.</h2>
+    <h3>Questo è un h3.</h3>
+    <h4>Questo è un h4.</h4>
+    <p>Questo è un paragrafo. <span class="evidenza_rosso" style="color: #ff0000;">Questo è evidenziato rosso.</span></p>
+    <blockquote>Questo è un blockquote. <span class="evidenza_blu">Questo è evidenziato blu.</span></blockquote>
+    <h3>Elenchi ordinati:</h3>
     <ol>
-    <li>oppure ordinati</li>
-    <li>e composti</li>
+    <li>primo</li>
+    <li>secondo</li>
+    <li>terzo</li>
     </ol>
-    <p><a href="https://www.unifi.it/" target="_blank" rel="noopener">link normali</a> oppure <a class="hilite" href="https://www.unifi.it/" target="_blank" rel="noopener">link in evidenza</a> oppure <a class="dimmed" href="https://www.unifi.it/" target="_blank" rel="noopener">link disattivati</a></p>
-    <p> </p>
-
+    <ol style="list-style-type: lower-alpha;">
+    <li>primo</li>
+    <li>secondo</li>
+    <li>terzo</li>
+    </ol>
+    <ol style="list-style-type: upper-alpha;">
+    <li>primo</li>
+    <li>secondo</li>
+    <li>terzo</li>
+    </ol>
+    <h3>Elenchi disordinati:</h3>
+    <ul>
+    <li>pippo</li>
+    <li>pluto</li>
+    <li>topolino</li>
+    </ul>
+    <ul style="list-style-type: circle;">
+    <li>pippo</li>
+    <li>pluto</li>
+    <li>topolino</li>
+    </ul>
+    <ul style="list-style-type: square;">
+    <li>pippo</li>
+    <li>pluto</li>
+    <li>topolino</li>
+    </ul>
+    <hr>
+    <p><a href="https://www.unifi.it/" target="_blank" rel="noopener">link normali</a></p>
+    <p>oppure <a class="hilite" href="https://www.unifi.it/" target="_blank" rel="noopener">link in evidenza</a></p>
+    <p>oppure <a class="dimmed" href="https://www.unifi.it/" target="_blank" rel="noopener">link disattivati</a></p>
+    
   </textarea>
   <div id="destinazione">
+  </div>
+</div>
 </body>
 
 </html>

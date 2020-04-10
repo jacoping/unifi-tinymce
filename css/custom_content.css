@@ -5,6 +5,14 @@ body, td, pre {
   margin: 8px;
 }
 
+.hilite {
+  background-color: red;
+}
+
+.dimmed {
+  background-color: grey;
+}
+
 .evidenza_rosso {
   color: red;
   font-weight: bold;
