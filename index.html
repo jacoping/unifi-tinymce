@@ -8,7 +8,7 @@
   <script src="tinymce/tinymce.min.js"></script>
 
   <script type="text/javascript">
-    var update = function(){
+    var update = function() {
       var pippo = tinymce.activeEditor.getContent();
       document.querySelector("#destinazione").innerHTML = pippo;
     }
@@ -30,21 +30,52 @@
 
       invalid_elements: "h1",
 
+      // plugins attivi
       plugins: 'advlist anchor charmap code contextmenu hr image link lists media powerpaste searchreplace table visualblocks visualchars wordcount ',
+
+      // menu e toolbar
       menubar: false,
       toolbar1: 'code | bold italic underline strikethrough | superscript subscript | styleselect | removeformat | charmap | undo redo',
       toolbar2: 'copy cut paste | numlist bullist | hr | link unlink anchor | image media table',
 
+      // toolbar mobile
       mobile: {
         theme: 'mobile',
         plugins: ['styleselect'],
         toolbar: ['undo', 'bold', 'italic', 'styleselect']
       },
 
+      // opzioni plugin
       powerpaste_allow_local_images: false,
       powerpaste_word_import: "clean",
       powerpaste_html_import: "clean",
+
       visualblocks_default_state: true,
+
+      table_clone_elements: "a",
+      table_appearance_options: false,
+      table_advtab: false,
+      table_cell_advtab: false,
+      table_row_advtab: false,
+      table_default_attributes: {},
+      table_default_styles: {},
+      table_responsive_width: true,
+      table_resize_bars: false,
+      table_style_by_css: true,
+
+      table_class_list: [{
+          title: 'None',
+          value: ''
+        },
+        {
+          title: 'Dog',
+          value: 'dog'
+        },
+        {
+          title: 'Cat',
+          value: 'cat'
+        }
+      ],
 
       link_class_list: [{
           title: "Nessuna",
@@ -136,6 +167,7 @@
       width: 960px;
       margin: auto;
     }
+
     #destinazione {
       width: 960px;
       border: 1px solid red;
@@ -143,7 +175,6 @@
       box-sizing: border-box;
       margin-top: 30px;
     }
-
   </style>
 
   <link rel="stylesheet" href="css/custom_content.css">
@@ -152,54 +183,74 @@
 
 <body>
   <div id="container">
-  <textarea class="editor-area">
+    <textarea class="editor-area">
 
-    <h2>Questo è un sito di prova per testare l'editor <strong>tinymce</strong>. Questo è un h2.</h2>
-    <h3>Questo è un h3.</h3>
-    <h4>Questo è un h4.</h4>
-    <p>Questo è un paragrafo. <span class="evidenza_rosso" style="color: #ff0000;">Questo è evidenziato rosso.</span></p>
-    <blockquote>Questo è un blockquote. <span class="evidenza_blu">Questo è evidenziato blu.</span></blockquote>
-    <h3>Elenchi ordinati:</h3>
-    <ol>
-    <li>primo</li>
-    <li>secondo</li>
-    <li>terzo</li>
-    </ol>
-    <ol style="list-style-type: lower-alpha;">
-    <li>primo</li>
-    <li>secondo</li>
-    <li>terzo</li>
-    </ol>
-    <ol style="list-style-type: upper-alpha;">
-    <li>primo</li>
-    <li>secondo</li>
-    <li>terzo</li>
-    </ol>
-    <h3>Elenchi disordinati:</h3>
-    <ul>
-    <li>pippo</li>
-    <li>pluto</li>
-    <li>topolino</li>
-    </ul>
-    <ul style="list-style-type: circle;">
-    <li>pippo</li>
-    <li>pluto</li>
-    <li>topolino</li>
-    </ul>
-    <ul style="list-style-type: square;">
-    <li>pippo</li>
-    <li>pluto</li>
-    <li>topolino</li>
-    </ul>
-    <hr>
-    <p><a href="https://www.unifi.it/" target="_blank" rel="noopener">link normali</a></p>
-    <p>oppure <a class="hilite" href="https://www.unifi.it/" target="_blank" rel="noopener">link in evidenza</a></p>
-    <p>oppure <a class="dimmed" href="https://www.unifi.it/" target="_blank" rel="noopener">link disattivati</a></p>
-    
+      <h2>Questo è un sito di prova per testare l'editor <strong>tinymce</strong>. Questo è un h2.</h2>
+      <table>
+      <thead>
+      <tr>
+      <td>colonna uno</td>
+      <td>colonna due</td>
+      <td>colonna tre</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>aaa</td>
+      <td>bbb</td>
+      <td>ccc</td>
+      </tr>
+      <tr>
+      <td>ddd</td>
+      <td>ec nibh ut, sagittis finibus lectus. Vestibulum tempus dignissim tellus eget viverra. Nam mollis ligula sit amet nulla commodo aliquam. Duis et molestie metus. Pellentesque feugiat sagittis mauris at maximus. Curabitur luctus commodo est. Ut consectetur vestibulum porta. Vestibulum ut lacin</td>
+      <td>ec nibh ut, sagittis finibus lectus. Vestibulum tempus dignissim tellus eget viverra. Nam mollis ligula sit amet nulla commodo aliquam. Duis et molestie metus. Pellentesque feugiat sagittis mauris at maximus. Curabitur luctus commodo est. Ut consectetur vestibulum porta. Vestibulum ut lacin</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3>Questo è un h3.</h3>
+      <h4>Questo è un h4.</h4>
+      <p>Questo è un paragrafo. <span class="evidenza_rosso" style="color: #ff0000;">Questo è evidenziato rosso.</span></p>
+      <blockquote>Questo è un blockquote. <span class="evidenza_blu">Questo è evidenziato blu.</span></blockquote>
+      <h3>Elenchi ordinati:</h3>
+      <ol>
+      <li>primo</li>
+      <li>secondo</li>
+      <li>terzo</li>
+      </ol>
+      <ol style="list-style-type: lower-alpha;">
+      <li>primo</li>
+      <li>secondo</li>
+      <li>terzo</li>
+      </ol>
+      <ol style="list-style-type: upper-alpha;">
+      <li>primo</li>
+      <li>secondo</li>
+      <li>terzo</li>
+      </ol>
+      <h3>Elenchi disordinati:</h3>
+      <ul>
+      <li>pippo</li>
+      <li>pluto</li>
+      <li>topolino</li>
+      </ul>
+      <ul style="list-style-type: circle;">
+      <li>pippo</li>
+      <li>pluto</li>
+      <li>topolino</li>
+      </ul>
+      <ul style="list-style-type: square;">
+      <li>pippo</li>
+      <li>pluto</li>
+      <li>topolino</li>
+      </ul>
+      <hr>
+      <p><a href="https://www.unifi.it/" target="_blank" rel="noopener">link normali</a></p>
+      <p>oppure <a class="hilite" href="https://www.unifi.it/" target="_blank" rel="noopener">link in evidenza</a></p>
+      <p>oppure <a class="dimmed" href="https://www.unifi.it/" target="_blank" rel="noopener">link disattivati</a></p>
   </textarea>
-  <div id="destinazione">
+    <div id="destinazione">
+    </div>
   </div>
-</div>
 </body>
 
 </html>
