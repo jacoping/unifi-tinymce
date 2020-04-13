@@ -136,16 +136,17 @@
         }
       ],
 
-      style_formats: [{
-          title: "Intestazione 2",
+      style_formats: [
+        {
+          title: "Titolo principale (h2)",
           block: "h2"
         },
         {
-          title: "Intestazione 3",
+          title: "Titolo secondario (h3)",
           block: "h3"
         },
         {
-          title: "Intestazione 4",
+          title: "Titoletto (h4)",
           block: "h4"
         },
         {
@@ -153,19 +154,14 @@
           block: "p"
         },
         {
-          title: "Paragrafo a destra",
+          title: "Titolo miniatura ",
+          block: "h2",
+          classes: "miniature-container"
+        },
+        {
+          title: "Descrizione miniatura",
           block: "p",
-          classes: "laterale"
-        },
-        {
-          title: "Clearfix",
-          block: "div",
-          classes: "clearfix"
-        },
-        {
-          title: "Box Miniature",
-          block: "div",
-          classes: "box-miniature"
+          classes: "miniature-text"
         },
         {
           title: "Blockquote",
@@ -308,14 +304,24 @@
 
     <h3>Esempi di miniature.</h3>
 
-    <h3><img class="miniatura" src="https://randomuser.me/api/portraits/lego/8.jpg" alt="Una Persona">Persona 1</h3>
-    <p class="laterale">Questo è un thumbnail realizzato senza un div. <br> Quisque eros libero, faucibus nec metus sit amet, ultricies finibus nibh. Donec ut odio nec turpis congue viverra nec sed eros. Etiam a ligula augue. </p>
-    <h3><img class="miniatura" src="https://randomuser.me/api/portraits/lego/4.jpg" alt="Una Persona">Persona 2</h3>
-    <p class="laterale">Questo è un thumbnail realizzato senza un div. <br> Quisque eros libero, faucibus nec metus sit amet, ultricies finibus nibh. Donec ut odio nec turpis congue viverra nec sed eros. Etiam a ligula augue. </p>
+    <h2 class="miniature-container">
+    <img class="miniatura" src="https://randomuser.me/api/portraits/lego/4.jpg" alt="Una Persona">Persona 1
+    </h2>
+    <p class="miniature-text">Questo è p "descrizione miniatura". Quisque eros libero, faucibus nec metus sit amet, ultricies finibus nibh. Donec ut odio nec turpis congue viverra nec sed eros. Etiam a ligula augue. </p>
 
-    <div class="box-miniature"><img src="https://randomuser.me/api/portraits/lego/2.jpg" alt="Una Persona"> <strong>Persona 3</strong><br><br>Questo è un thumbnail realizzato con un div. <br> Quisque eros libero, faucibus nec metus sit amet, ultricies finibus nibh. Donec ut odio nec turpis congue viverra nec sed eros. Etiam a ligula augue. </div>
-    <div class="box-miniature"><img src="https://randomuser.me/api/portraits/lego/9.jpg" alt="Una Persona"> <strong>Persona 4</strong><br><br>Questo è un thumbnail realizzato con un div. <br> Quisque eros libero, faucibus nec metus sit amet, ultricies finibus nibh. Donec ut odio nec turpis congue viverra nec sed eros. Etiam a ligula augue. </div>
+    <h2 class="miniature-container"><img src="https://randomuser.me/api/portraits/lego/3.jpg" alt="">Pinco Pallino</h2>
+    <p class="miniature-text">Pinco pallino è un dottore molto importante.</p>
+    <ul>
+    <li>Telefono: 05540405896.</li>
+    <li>Cellulare: 312930913</li>
+    <li>Email: 1213e1</li>
+    <li> </li>
+    </ul>
 
+    <h2 class="miniature-container">
+    <img src="https://randomuser.me/api/portraits/lego/8.jpg" alt="Una Persona">Persona 3
+    </h2>
+    <p>Questo è un p normale e va accapo. Quisque eros libero, faucibus nec metus sit amet, ultricies finibus nibh. Donec ut odio nec turpis congue viverra nec sed eros. Etiam a ligula augue. </p>
 
     <h3>Elenchi ordinati:</h3>
     <ol>

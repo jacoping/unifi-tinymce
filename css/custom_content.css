@@ -1,23 +1,16 @@
-
-
-
 /*
 IMPORTA STILI NICO
 */
-@import "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027" screen;
-
-
-
-
+@import "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027"screen;
 
 /*
   PICCOLE MODIFICHE GENERALI AL LAYOUT
 */
-
 /* questo padding c'è già ma è su .unit quindi non me lo prendeva */
 .content-right {
   padding: 10px;
 }
+
 @media screen and (min-width: 768px) {
   .content-right {
     padding-left: 1.3em;
@@ -36,7 +29,7 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote {
 }
 
 .content-right div {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 /* questo lo aggiungerei per sicurezza, così che in nessun caso si rompa il layout su mobile */
@@ -44,29 +37,20 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote {
   overflow-x: hidden;
 }
 
-
-
-
 /* PROPOSTA DI SOLUZIONE PER MARGINI HEADINGS */
 h2 {
   margin-top: 0;
 }
-.content-right > h2 { margin-top: 1.5em;}
 
-
-
+.content-right>h2 {
+  margin-top: 1.5em;
+}
 
 /*
   STILI IMMAGINI
 */
-
-
 p, h1, h2, h3, h4, table, blockquote, div {
   clear: both;
-}
-
-p.laterale {
-  clear: none;
 }
 
 img {
@@ -76,6 +60,28 @@ img {
   margin-top: 40px;
 }
 
+p.miniature-text {
+  clear: none;
+}
+
+h2.miniature-container {
+  text-decoration: underline;
+}
+
+h2.miniature-container img {
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  h2.miniature-container img {
+    width: 30%;
+    float: left;
+    margin-right: 60px;
+  }
+}
+
+/*
 img.miniatura {
   width: 50%;
   margin-bottom: 1em;
@@ -107,33 +113,23 @@ img.miniatura {
   margin-right: 20px;
 }
 }
-
-
-
-
-
-
-
+*/
 /*
   STILI LINK
 */
-
 span.evidenza_rosso {
   font-weight: 700;
   color: red;
 }
+
 span.evidenza_blu {
   font-weight: 700;
   color: blue;
 }
 
-
-
 /*
   STILI TABELLE
 */
-
-
 table {
   width: 100% !important;
   border-collapse: collapse;
@@ -163,13 +159,15 @@ td {
 }
 
 table::-webkit-scrollbar {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
+
 table::-webkit-scrollbar:horizontal {
-    height: 11px;
+  height: 11px;
 }
+
 table::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    border: 2px solid white;
-    background-color: rgba(0, 0, 0, .5);
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, .5);
 }
