@@ -7,6 +7,19 @@ IMPORTA STILI NICO
 @import "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027" screen;
 */
 
+/* PROPOSTA DI SOLUZIONE PER MARGINI HEADINGS */
+h2 {
+  margin-top: 0;
+}
+.content-right > h2 { margin-top: 1.5em;}
+
+
+/* margine superiore editor
+*/
+.mce-content-body {margin-top: 0;}
+
+
+
 
 /* questo c'è già ma è su .unit quindi non me lo prendeva
 */
@@ -34,13 +47,6 @@ IMPORTA STILI NICO
 
 
 
-/* Altrimenti l'editor non lo prende */
-/* da controllare anche per mobile */
-@media screen and (min-width: 768px) {
-td, th {
-  font-size: 21px;
-}
-}
 
 
 span.evidenza_rosso {
