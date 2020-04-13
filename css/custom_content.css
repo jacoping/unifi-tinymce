@@ -5,7 +5,7 @@
 IMPORTA STILI NICO
 */
 @import "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027" screen;
-*/
+
 
 
 
@@ -24,9 +24,19 @@ IMPORTA STILI NICO
   }
 }
 
+/* in alternativa aggiungerlo anche alle tabelle, sennò non stanno allineate */
+h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* scusa su questo ho cambiato idea */
 .content-right h4 {
   font-weight: 700;
+}
+
+.content-right div {
+    font-weight: 300;
 }
 
 /* questo lo aggiungerei per sicurezza, così che in nessun caso si rompa il layout su mobile */
@@ -42,6 +52,62 @@ h2 {
   margin-top: 0;
 }
 .content-right > h2 { margin-top: 1.5em;}
+
+
+
+
+/*
+  STILI IMMAGINI
+*/
+
+
+p, h1, h2, h3, h4, table, blockquote, div {
+  clear: both;
+}
+
+p.laterale {
+  clear: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+
+img.miniatura {
+  width: 50%;
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+img.miniatura {
+  width:30%;
+  float: left;
+  margin-right: 20px;
+}
+}
+
+.box-miniature {
+  margin-top: 40px;
+}
+.box-miniature img {
+  width: 50%;
+  margin-bottom: 1em;
+  margin-top: 0;
+
+}
+
+@media screen and (min-width: 768px) {
+.box-miniature img {
+  width:30%;
+  float: left;
+  margin-right: 20px;
+}
+}
+
 
 
 
