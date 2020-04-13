@@ -1,14 +1,48 @@
+
+
+
+/*
+IMPORTA STILI NICO
+*/
+@import "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027" screen;
+*/
+
+
 /* questo c'è già ma è su .unit quindi non me lo prendeva
 */
 
 .content-right {
-  padding-left: 1.3em;
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .content-right {
+    padding-left: 1.3em;
+  }
+}
+
+/* scusa su questo ho cambiato idea */
+.content-right h4 {
+  font-weight: 700;
+}
+
+/* questo lo aggiungerei per sicurezza, così che in nessun caso si rompa il layout su mobile */
+.content-right {
+  overflow-x: hidden;
 }
 
 
 
-/* questo c'è già ma è su .unit quindi non me lo prendeva
-*/
+
+/* Altrimenti l'editor non lo prende */
+/* da controllare anche per mobile */
+@media screen and (min-width: 768px) {
+td, th {
+  font-size: 21px;
+}
+}
+
+
 span.evidenza_rosso {
   font-weight: 700;
   color: red;
@@ -19,23 +53,55 @@ span.evidenza_blu {
 }
 
 table {
+  width: 100% !important;
   border-collapse: collapse;
-  border-top: 1px solid black;
-  width: 100%;
+  margin: 0;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-thead, td, th {
-  border-bottom: 1px solid black;
-}
 thead, th {
   background-color: lightgrey;
   font-weight: bold;
 }
 
-thead {white-space: nowrap;}
+thead {
+  white-space: nowrap;
+}
+
+tr {
+  border: 1px solid black;
+}
 
 td {
-  padding: 7px;
+  padding: 5px;
+  vertical-align: top;
+}
+
+
+
+
+
+
+
+
+/*
+TABELLE TROPPO LARGHE SU MOBILE
+*/
+
+table {
+  display: block;
+  overflow: auto;
+}
+
+table::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+table::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+table::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, .5);
 }

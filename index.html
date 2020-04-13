@@ -3,10 +3,38 @@
 
 <head>
   <meta charset=“UTF-8”>
+  <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=1">
   <title>UNIFI TINYMCE</title>
 
-  <script src="./tinymce/tinymce.min.js"></script>
 
+  <style media="screen">
+
+  #container {
+  }
+
+  @media screen and (min-width: 768px) {
+    #container {
+      width: 960px;
+      margin: auto;
+    }
+  }
+
+    #destinazione {
+      border: 1px solid red;
+      box-sizing: border-box;
+      margin-top: 30px;
+    }
+
+
+
+  </style>
+
+  <!--
+  <link rel="stylesheet" href="https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027">
+  -->
+  <link rel="stylesheet" href="css/custom_content.css">
+
+  <script src="./tinymce/tinymce.min.js"></script>
   <script type="text/javascript">
     var update = function() {
       var pippo = tinymce.activeEditor.getContent();
@@ -23,7 +51,6 @@
       height: 900,
       content_css: "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027, ./css/custom_content.css",
       body_class: 'content-right',
-      theme: "modern",
       language: "it",
       schema: "html5",
       entity_encoding: "raw",
@@ -163,90 +190,149 @@
     });
   </script>
 
-  <style media="screen">
-    #container {
-      width: 960px;
-      margin: auto;
-    }
 
-    #destinazione {
-      border: 1px solid red;
-      box-sizing: border-box;
-      margin-top: 30px;
-    }
-  </style>
-
-  <link rel="stylesheet" href="https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027">
-  <link rel="stylesheet" href="css/custom_content.css">
 
 </head>
 
 <body>
   <div id="container">
-    <textarea class="editor-area content-right">
 
-      <h2>Questo è un h2.</h2>
-      <table>
-      <thead>
-      <tr>
-      <td>colonna uno</td>
-      <td>colonna due</td>
-      <td>colonna tre</td>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td>aaa</td>
-      <td>bbb</td>
-      <td>ccc</td>
-      </tr>
-      <tr>
-      <td>ddd</td>
-      <td>ec nibh ut, sagittis finibus lectus. Vestibulum tempus dignissim tellus eget viverra. Nam mollis ligula sit amet nulla commodo aliquam. Duis et molestie metus. Pellentesque feugiat sagittis mauris at maximus. Curabitur luctus commodo est. Ut consectetur vestibulum porta. Vestibulum ut lacin</td>
-      <td>ec nibh ut, sagittis finibus lectus. Vestibulum tempus dignissim tellus eget viverra. Nam mollis ligula sit amet nulla commodo aliquam. Duis et molestie metus. Pellentesque feugiat sagittis mauris at maximus. Curabitur luctus commodo est. Ut consectetur vestibulum porta. Vestibulum ut lacin</td>
-      </tr>
-      </tbody>
-      </table>
-      <h3>Questo è un h3.</h3>
-      <h4>Questo è un h4.</h4>
-      <p>Questo è un paragrafo. <span class="evidenza_rosso" style="color: #ff0000;">Questo è evidenziato rosso.</span></p>
-      <blockquote>Questo è un blockquote. <span class="evidenza_blu">Questo è evidenziato blu.</span></blockquote>
-      <h3>Elenchi ordinati:</h3>
-      <ol>
-      <li>primo</li>
-      <li>secondo</li>
-      <li>terzo</li>
-      </ol>
-      <ol style="list-style-type: lower-alpha;">
-      <li>primo</li>
-      <li>secondo</li>
-      <li>terzo</li>
-      </ol>
-      <ol style="list-style-type: upper-alpha;">
-      <li>primo</li>
-      <li>secondo</li>
-      <li>terzo</li>
-      </ol>
-      <h3>Elenchi disordinati:</h3>
-      <ul>
-      <li>pippo</li>
-      <li>pluto</li>
-      <li>topolino</li>
-      </ul>
-      <ul style="list-style-type: circle;">
-      <li>pippo</li>
-      <li>pluto</li>
-      <li>topolino</li>
-      </ul>
-      <ul style="list-style-type: square;">
-      <li>pippo</li>
-      <li>pluto</li>
-      <li>topolino</li>
-      </ul>
-      <hr>
-      <p><a href="https://www.unifi.it/" target="_blank" rel="noopener">link normali</a></p>
-      <p>oppure <a class="hilite" href="https://www.unifi.it/" target="_blank" rel="noopener">link in evidenza</a></p>
-      <p>oppure <a class="dimmed" href="https://www.unifi.it/" target="_blank" rel="noopener">link disattivati</a></p>
+
+  <textarea class="editor-area content-right">
+
+    <h2>Questo è un h2.</h2>
+
+
+    <table>
+    <thead>
+    <tr>
+    <td>col1</td>
+    <td>col2</td>
+    <td>col3</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>una</td>
+    <td>tabella</td>
+    <td>stretta</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table>
+    <thead>
+    <tr>
+    <td>colonna uno</td>
+    <td>colonna due</td>
+    <td>colonna tre</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>una</td>
+    <td>tabella</td>
+    <td>normale</td>
+    </tr>
+    <tr>
+    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+    <td>Phasellus interdum ante vel ligula molestie faucibus.</td>
+    <td>Quisque eros libero, faucibus nec metus sit amet, ultricies finibus nibh. Donec ut odio nec turpis congue viverra nec sed eros. Etiam a ligula augue.</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table>
+    <thead>
+    <tr>
+    <td>col1</td>
+    <td>col2</td>
+    <td>col3</td>
+    <td>col4</td>
+    <td>col5</td>
+    <td>col6</td>
+    <td>col7</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>unaTabellaMoltoLarga</td>
+    <td>unaTabellaMoltoLarga</td>
+    <td>unaTabellaMoltoLarga</td>
+    <td>unaTabellaMoltoLarga</td>
+    <td>unaTabellaMoltoLarga</td>
+    <td>unaTabellaMoltoLarga</td>
+    <td>unaTabellaMoltoLarga</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table>
+    <thead>
+    <tr>
+    <td>colonna uno</td>
+    <td>colonna due</td>
+    <td>colonna tre</td>
+    <td>colonna quattro</td>
+    <td>colonna cinque</td>
+    <td>colonna sei</td>
+    <td>colonna sette</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>un'altra</td>
+    <td>tabella</td>
+    <td>molto</td>
+    <td>molto</td>
+    <td>molto</td>
+    <td>molto</td>
+    <td>larga</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <h3>Questo è un h3.</h3>
+    <h4>Questo è un h4.</h4>
+    <p>Questo è un paragrafo. <span class="evidenza_rosso" style="color: #ff0000;">Questo è evidenziato rosso.</span></p>
+    <blockquote>Questo è un blockquote. <span class="evidenza_blu">Questo è evidenziato blu.</span></blockquote>
+    <h3>Elenchi ordinati:</h3>
+    <ol>
+    <li>primo</li>
+    <li>secondo</li>
+    <li>terzo</li>
+    </ol>
+    <ol style="list-style-type: lower-alpha;">
+    <li>primo</li>
+    <li>secondo</li>
+    <li>terzo</li>
+    </ol>
+    <ol style="list-style-type: upper-alpha;">
+    <li>primo</li>
+    <li>secondo</li>
+    <li>terzo</li>
+    </ol>
+    <h3>Elenchi disordinati:</h3>
+    <ul>
+    <li>pippo</li>
+    <li>pluto</li>
+    <li>topolino</li>
+    </ul>
+    <ul style="list-style-type: circle;">
+    <li>pippo</li>
+    <li>pluto</li>
+    <li>topolino</li>
+    </ul>
+    <ul style="list-style-type: square;">
+    <li>pippo</li>
+    <li>pluto</li>
+    <li>topolino</li>
+    </ul>
+    <hr>
+    <p><a href="https://www.unifi.it/" target="_blank" rel="noopener">link normali</a></p>
+    <p>oppure <a class="hilite" href="https://www.unifi.it/" target="_blank" rel="noopener">link in evidenza</a></p>
+    <p>oppure <a class="dimmed" href="https://www.unifi.it/" target="_blank" rel="noopener">link disattivati</a></p>
+
   </textarea>
     <div id="destinazione" class="content-right">
     </div>
