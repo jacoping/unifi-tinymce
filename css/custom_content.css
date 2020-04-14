@@ -11,12 +11,6 @@ IMPORTA STILI NICO
   padding: 10px;
 }
 
-@media screen and (min-width: 768px) {
-  .content-right {
-    padding-left: 1.3em;
-  }
-}
-
 /* in alternativa aggiungerlo anche alle tabelle, sennò non stanno allineate */
 h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote {
   padding-left: 0;
@@ -38,17 +32,33 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote {
 }
 
 /* PROPOSTA DI SOLUZIONE PER MARGINI HEADINGS */
+/* questo mettilo come ti pare */
 h2 {
   margin-top: 0;
 }
 
+/* questo si applica agli header */
 .content-right>h2 {
   margin-top: 1.5em;
+}
+
+blockquote {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    position: relative;
+    border: 0;
+    padding: 0 0 0 1rem;
+    margin: 2.5em 2em 2.5em 2em;
+    max-width: 100%;
+    border-left: 10px solid #5b7c9f;
 }
 
 /*
   STILI IMMAGINI
 */
+
 p, h1, h2, h3, h4, table, blockquote, div {
   clear: both;
 }
@@ -81,51 +91,50 @@ h2.miniature-container img {
   }
 }
 
-/*
-img.miniatura {
-  width: 50%;
-  margin-bottom: 1em;
-  margin-top: 0;
-}
-
-@media screen and (min-width: 768px) {
-img.miniatura {
-  width:30%;
-  float: left;
-  margin-right: 20px;
-}
-}
-
-.box-miniature {
+/* per didascalie */
+figure {
+  margin: 0 0 20px 0;
   margin-top: 40px;
 }
-.box-miniature img {
-  width: 50%;
-  margin-bottom: 1em;
-  margin-top: 0;
-
+figcaption {
+  font-size: 90%;
+  margin-top: 5px;
 }
 
-@media screen and (min-width: 768px) {
-.box-miniature img {
-  width:30%;
-  float: left;
-  margin-right: 20px;
-}
-}
-*/
+
+
 /*
-  STILI LINK
+  STILI TESTO E LINK
 */
+
+/* questo è nuovo */
 span.evidenza_rosso {
   font-weight: 700;
-  color: red;
+  color: #b30b0b;
 }
 
+/* questo è @color-6 */
 span.evidenza_blu {
   font-weight: 700;
-  color: blue;
+  color: #20608d;
 }
+
+/* questo da sostituire a quello che c'è */
+.content-right a.hilite, .content-right a.hilite:visited {
+    display: block;
+    background-color: #5b7c9f;
+    color: #ffffff;
+    padding: 20px 30px 20px 30px ;
+    margin-top: 10px;
+    text-transform: none;
+    text-decoration: none!important;
+    width: max-content;
+    border-radius: 4px;
+    font-weight: 600;
+    box-shadow: 3px 3px 6px #ccc;
+}
+
+
 
 /*
   STILI TABELLE
@@ -170,4 +179,14 @@ table::-webkit-scrollbar-thumb {
   border-radius: 8px;
   border: 2px solid white;
   background-color: rgba(0, 0, 0, .5);
+}
+
+
+/*
+  HR
+*/
+
+hr {
+  border-top: 1px solid #8c8b8b;
+  margin: 40px 0 40px 0;
 }
