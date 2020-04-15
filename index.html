@@ -131,7 +131,7 @@
         },
         {
           title: "Titolo miniatura ",
-          block: "h2",
+          block: "h3",
           classes: "miniature-container"
         },
         {
@@ -181,7 +181,7 @@
     <h4>Questo è un h4.</h4>
     <p>Questo è un paragrafo. <span class="evidenza_rosso" style="color: #ff0000;">Questo è evidenziato rosso.</span></p>
 
-    <p>Questo è un paragrafo un po' lungo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius varius elit, ut lobortis velit cursus ut. Praesent quis libero dictum, tristique ipsum ut, lobortis mi. Suspendisse a mollis quam. Aenean eu erat vitae massa porttitor posuere. Suspendisse non tempus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris lacinia libero in nibh gravida, vitae euismod ligula vulputate.</p>
+    <p>Questo è un paragrafo un po' lungo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius varius elit, ut lobortis velit cursus ut. Praesent quis libero dictum, <a href="https://www.unifi.it/" target="_blank" rel="noopener">questo è un link </a>tristique ipsum ut, lobortis mi. Suspendisse a mollis quam. Aenean eu erat vitae massa porttitor posuere. Suspendisse non tempus tortor. Interdum et malesuada fames ac ante ipsum primis <a href="https://www.google.com/" target="_blank" rel="noopener">questo è un link con icona </a>. Mauris lacinia libero in nibh gravida, vitae euismod ligula vulputate.</p>
     <p>E questo è un altro. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. <span class="evidenza_blu">Questo è evidenziato blu.</span> Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
 
     <blockquote><p>Questo è un blockquote. Aenean eu erat vitae massa porttitor posuere. Suspendisse non tempus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris lacinia libero in nibh gravida, vitae euismod ligula vulputate.</p>
@@ -189,11 +189,12 @@
 
     <hr>
 
-    <p><a href="https://www.google.com/" target="_blank" rel="noopener">Link normali</a></p>
+    <p><a href="https://www.unifi.it/" target="_blank" rel="noopener">Link normali</a></p>
+    <p><a href="https://www.google.com/" target="_blank" rel="noopener">Link esterni</a></p>
     <p><a href="https://www.unifi.it/file.pdf" target="_blank" rel="noopener">Link esterni</a></p>
     <p><a href="https://www.google.com/file.pdf" target="_blank" rel="noopener">Link a file</a></p>
 
-    <p>oppure <a class="hilite" href="https://www.unifi.it/" target="_blank" rel="noopener">Link in evidenza</a></p>
+    <p><a class="hilite" href="https://www.unifi.it/" target="_blank" rel="noopener">Link in evidenza</a></p>
 
     <hr>
 
@@ -295,7 +296,8 @@
     <h3>Esempi di gatti</h3>
 
     <p><img src="http://placekitten.com/g/500/300" alt="gatto"></p>
-    <p>Questo è un gatto a tutta larghezza</p>
+    <p>Questo era un gatto a tutta larghezza. E questo è un paragrafo. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. <span class="evidenza_blu">Questo è evidenziato blu.</span> Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
+
 
     <figure class="image"><img src="http://placekitten.com/g/500/250" alt="gatto">
     <figcaption>Questo è un gatto a tutta larghezza con didascalia.</figcaption>
@@ -305,12 +307,10 @@
 
     <h2>Miniature</h2>
 
-    <h2 class="miniature-container">
-    <img class="miniatura" src="https://i.pravatar.cc/300?img=1" alt="Una Persona">Persona 1
-    </h2>
+    <h3 class="miniature-container"><img class="miniatura" src="https://i.pravatar.cc/300?img=1" alt="Una Persona">Persona 1</h3>
     <p class="miniature-text">Questo è p "descrizione miniatura". Quisque eros libero, faucibus nec metus sit amet, ultricies finibus nibh. Donec ut odio nec turpis congue viverra nec sed eros. Etiam a ligula augue. </p>
 
-    <h2 class="miniature-container"><img src="https://i.pravatar.cc/300?img=2" alt="">Pinco Pallino</h2>
+    <h3 class="miniature-container"><img src="https://i.pravatar.cc/300?img=2" alt="">Pinco Pallino</h3>
     <p class="miniature-text">Pinco pallino è un dottore molto importante.</p>
     <ul>
     <li>Telefono: 05540405896.</li>
@@ -318,9 +318,7 @@
     <li>Email: 1213e1</li>
     </ul>
 
-    <h2 class="miniature-container">
-    <img src="https://i.pravatar.cc/300?img=3" alt="Una Persona">Persona 3
-    </h2>
+    <h3 class="miniature-container"><img src="https://i.pravatar.cc/300?img=3" alt="Una Persona">Persona 3</h3>
     <p>Questo è un p normale e va accapo. Quisque eros libero, faucibus nec metus sit amet, ultricies finibus nibh. Donec ut odio nec turpis congue viverra nec sed eros. Etiam a ligula augue. </p>
 
     <hr>
@@ -357,6 +355,24 @@
     <li>pluto</li>
     <li>topolino</li>
     </ul>
+
+    <h2>Questo è un h2 seguito da un p.</h2>
+    <p>Questo è un paragrafo un po' lungo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius varius elit, ut lobortis velit cursus ut. Praesent quis libero dictum, tristique ipsum ut, lobortis mi. Suspendisse a mollis quam. Aenean eu erat vitae massa porttitor posuere. Suspendisse non tempus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris lacinia libero in nibh gravida, vitae euismod ligula vulputate.</p>
+    <h3>Questo è un h3 seguito da un p.</h3>
+    <p>E questo è un altro. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
+
+    <h4>Questo è un h4 seguito da un p.</h4>
+    <p>Questo è un paragrafo un po' lungo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius varius elit, ut lobortis velit cursus ut. Praesent quis libero dictum, tristique ipsum ut, lobortis mi. Suspendisse a mollis quam. Aenean eu erat vitae massa porttitor posuere. Suspendisse non tempus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris lacinia libero in nibh gravida, vitae euismod ligula vulputate.</p>
+    <h4>E un altro.</h4>
+    <p>E questo è un altro. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. Questo è evidenziato blu.</span> Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
+
+    <h2>Questo è un h2 seguito da un h3 .</h2>
+    <h3>Questo è un h3 seguito da un p.</h3>
+    <p>E questo è un altro. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
+
+    <h3>Questo è un h3 seguito da un h4.</h3>
+    <h4>Questo è un h4 seguito da un p.</h4>
+    <p>E questo è un parafo. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
 
 
   </textarea>

@@ -31,18 +31,60 @@ h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote {
   overflow-x: hidden;
 }
 
-/* PROPOSTA DI SOLUZIONE PER MARGINI HEADINGS */
+
+
+/* MARGINI HEADINGS */
 /* questo mettilo come ti pare */
-h2 {
+.content-right p,
+.content-right h2,
+.content-right h3,
+.content-right h4,
+.content-right h5,
+.content-right h6,
+.content-right blockquote,
+.content-right img,
+.content-right table,
+.content-right a
+ {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
-/* questo si applica agli header */
+.content-right p
+{
+  margin-top: 0.3em;
+}
+
 .content-right>h2 {
   margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
-blockquote {
+.content-right>h3 ,
+.content-right>h4 {
+  margin-top: 1em;
+}
+
+.content-right h2 + h3 {
+margin-top: 0.5em;
+}
+
+.content-right h3 + h4 {
+margin-top: 0.3em;
+}
+
+
+
+
+
+
+
+
+
+
+/* STILE BLOCKQUOTE */
+
+.content-right blockquote {
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
@@ -50,41 +92,49 @@ blockquote {
     position: relative;
     border: 0;
     padding: 0 0 0 1rem;
-    margin: 2.5em 2em 2.5em 2em;
+    margin: 1.5em 1em 1.5em 1em;
     max-width: 100%;
     border-left: 10px solid #5b7c9f;
+}
+
+@media screen and (min-width: 768px) {
+.content-right blockquote {
+  margin-left: 2.5em;
+  margin-right: 2em;
+}
 }
 
 /*
   STILI IMMAGINI
 */
 
-p, h1, h2, h3, h4, table, blockquote, div {
+.content-right p, .content-right h1, .content-right h2, .content-right h3, .content-right h4, .content-right table, .content-right blockquote, .content-right div {
   clear: both;
 }
 
-img {
+.content-right img {
   display: block;
   width: 100%;
   height: auto;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-p.miniature-text {
+.content-right p.miniature-text {
   clear: none;
 }
 
-h2.miniature-container {
+.content-right h3.miniature-container {
   text-decoration: underline;
 }
 
-h2.miniature-container img {
+.content-right h3.miniature-container img {
   margin-bottom: 1em;
   margin-top: 0;
 }
 
 @media screen and (min-width: 768px) {
-  h2.miniature-container img {
+  .content-right h3.miniature-container img {
     width: 30%;
     float: left;
     margin-right: 60px;
@@ -92,11 +142,15 @@ h2.miniature-container img {
 }
 
 /* per didascalie */
-figure {
+.content-right figure {
   margin: 0 0 20px 0;
   margin-top: 40px;
 }
-figcaption {
+
+.content-right figure img {
+  margin-bottom: 0;
+}
+.content-right figcaption {
   font-size: 90%;
   margin-top: 5px;
 }
@@ -108,13 +162,13 @@ figcaption {
 */
 
 /* questo è nuovo */
-span.evidenza_rosso {
+.content-right span.evidenza_rosso {
   font-weight: 700;
   color: #b30b0b;
 }
 
 /* questo è @color-6 */
-span.evidenza_blu {
+.content-right span.evidenza_blu {
   font-weight: 700;
   color: #20608d;
 }
@@ -139,7 +193,7 @@ span.evidenza_blu {
 /*
   STILI TABELLE
 */
-table {
+.content-right table {
   width: 100% !important;
   border-collapse: collapse;
   margin: 0;
@@ -149,33 +203,33 @@ table {
   overflow: auto;
 }
 
-thead, th {
+.content-right thead, .content-right th {
   background-color: lightgrey;
   font-weight: bold;
 }
 
-thead {
+.content-right thead {
   white-space: nowrap;
 }
 
-tr {
+.content-right tr {
   border: 1px solid black;
 }
 
-td {
+.content-right td {
   padding: 5px;
   vertical-align: top;
 }
 
-table::-webkit-scrollbar {
+.content-right table::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 
-table::-webkit-scrollbar:horizontal {
+.content-right table::-webkit-scrollbar:horizontal {
   height: 11px;
 }
 
-table::-webkit-scrollbar-thumb {
+.content-right table::-webkit-scrollbar-thumb {
   border-radius: 8px;
   border: 2px solid white;
   background-color: rgba(0, 0, 0, .5);
@@ -186,7 +240,7 @@ table::-webkit-scrollbar-thumb {
   HR
 */
 
-hr {
+.content-right hr {
   border-top: 1px solid #8c8b8b;
   margin: 40px 0 40px 0;
 }
