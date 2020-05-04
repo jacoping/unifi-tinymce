@@ -8,6 +8,8 @@
 /* AGGIUNTA DI JACOPO */
 #tinymce {
   margin-top: 0;
+  width: 960px;
+  margin: auto;
 }
 
 
