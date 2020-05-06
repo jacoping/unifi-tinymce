@@ -48,8 +48,8 @@
         editor.on('Change', update);
       },
       width: 960,
-      height: 900,
-      content_css: "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027, ./css/custom_content.css",
+      height: 600,
+      content_css: "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027, ./css/custom_content_2.css, ./css/only-for-editor.css",
       body_class: 'content-right',
       language: "it",
       schema: "html5",
@@ -57,20 +57,13 @@
       entity_encoding: "raw",
       element_format: "html",
 
-      invalid_elements: "h1",
-      invalid_styles: {
-        '*':'color'
-      },
-      valid_children : "div[h2]",
-
-
       // plugins attivi
-      plugins: 'advlist anchor charmap code contextmenu hr image link lists media powerpaste searchreplace table visualblocks visualchars wordcount ',
+      plugins: 'advlist anchor charmap code contextmenu hr image link lists media searchreplace table visualblocks visualchars wordcount fullscreen powerpaste template',
 
       // menu e toolbar
       menubar: false,
-      toolbar1: 'code | bold italic underline strikethrough blockquote | superscript subscript | styleselect | removeformat | charmap | undo redo',
-      toolbar2: 'copy cut paste | numlist bullist | hr | link unlink anchor | image media table',
+      toolbar1: 'code fullscreen | bold italic underline strikethrough blockquote | superscript subscript | styleselect | charmap | removeformat',
+      toolbar2: 'undo redo | copy cut paste | numlist bullist | hr | link unlink anchor | image media table template',
 
       // toolbar mobile
       mobile: {
@@ -109,8 +102,30 @@
       link_title: true,
 
       image_dimensions: false,
-      image_caption: true,
+      image_caption: false,
       image_advtab: false,
+
+      media_dimensions: false,
+      media_alt_source: false,
+      media_poster: false,
+
+      templates: [
+        {
+          title: 'Immagine con didascalia',
+          description: 'This is my template.',
+          content: '<figure class="with-caption"><img src="https://via.placeholder.com/2x1"><figcaption>Didascalia</figcaption></figure><p></p>'
+        },
+        {
+          title: 'Miniature',
+          description: 'This is my template.',
+          content: '<figure class="miniature-container"><img src="https://via.placeholder.com/1"><figcaption><strong><u>Titolo</u></strong><br><br>Descrizione</figcaption></figure><p></p>'
+        }
+      ],
+
+      formats: {
+        underline: {inline: 'u'},
+        strikethrough: {inline: 'del'},
+      },
 
       style_formats: [
         {
@@ -129,40 +144,40 @@
           title: "Paragrafo",
           block: "p"
         },
-        {
-          title: "Titolo miniatura ",
-          block: "h3",
-          classes: "miniature-container"
-        },
-        {
-          title: "Descrizione miniatura",
-          block: "p",
-          classes: "miniature-text"
-        },
+
         {
           title: "Blockquote",
           block: "blockquote"
         },
         {
-          title: 'Testo evidenziato',
-          items: [{
-              title: "Evidenziato rosso",
-              inline: "span",
-              classes: 'evidenza_rosso',
-            },
-            {
-              title: "Evidenziato blu",
-              inline: "span",
-              classes: 'evidenza_blu'
-            }
-          ]
+          title: 'Evidenzia celle tabella',
         },
+        {
+          title: "Evidenziato rosso",
+          selector: "td",
+          classes: 'sfondorosso',
+          exact: true
+        },
+        {
+          title: "Evidenziato azzurro",
+          selector: "td",
+          classes: 'sfondoazzurro',
+          exact: true
+        }
+
       ],
-      /*
-            external_filemanager_path:"/fmlocal/",
-            filemanager_title:"File manager" ,
-            external_plugins: { "filemanager" : "/fmlocal/plugin.min.js"},
-      */
+
+      keep_styles: false,
+
+      // tag e attributi consentiti
+      valid_elements: '@[id|style|src|alt|href|title|target],#p,-span,h2,h3,h4,blockquote,+a,-em,-strong,div[class<miniature-container],figure[class],img,figcaption,iframe[allowfullscreen],u,del,table,thead,tbody,tfoot,th,tr,td,col,colgroup,-ol,-ul,-li,-sub,-sup,br,hr',
+
+      // stili in linea consentiti
+      valid_styles: 'list-style-type',
+
+      // questo non è assoluto, ma relativo allo schema (HTML5)
+      valid_children : "+p[iframe],figure[img|figcaption],-figcaption[h2|h3|h4|figure],-h2[div,img,p,iframe],-h3[div,img,p,iframe],-h4[div,img,p,iframe],-p[img],-li[h2|h3|h4|p|blockquote]"
+
     });
   </script>
 
