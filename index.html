@@ -37,8 +37,8 @@
   <script src="./tinymce5/tinymce.min.js"></script>
   <script type="text/javascript">
     var update = function() {
-      var pippo = tinymce.activeEditor.getContent();
-      document.querySelector("#destinazione").innerHTML = pippo;
+      var contenuto = tinymce.activeEditor.getContent();
+      document.querySelector("#destinazione").innerHTML = contenuto;
     }
 
     tinymce.init({
@@ -109,6 +109,12 @@
       media_alt_source: false,
       media_poster: false,
 
+      media_url_resolver: function (data, resolve) {
+        let html = '<iframe src="'+data.url+'" allowfullscreen="allowfullscreen"></iframe>';
+        resolve({html: html});
+
+      },
+
       templates: [
         {
           title: 'Immagine con didascalia',
@@ -170,13 +176,13 @@
       keep_styles: false,
 
       // tag e attributi consentiti
-      valid_elements: '@[id|style|src|alt|href|title|target],#p,-span,h2,h3,h4,blockquote,+a,-em,-strong,div[class<miniature-container],figure[class],img,figcaption,iframe[allowfullscreen],u,del,table,thead,tbody,tfoot,th,tr,td,col,colgroup,-ol,-ul,-li,-sub,-sup,br,hr',
+      valid_elements: '@[id|style|src|alt|href|title|target],#p,-span,h2,h3,h4,blockquote,+a,-em,-strong,div[class],figure[class],img,figcaption,iframe[allowfullscreen],u,del,table,thead,tbody,tfoot,th,tr,td,col,colgroup,-ol,-ul,-li,-sub,-sup,br,hr',
 
       // stili in linea consentiti
       valid_styles: 'list-style-type',
 
       // questo non è assoluto, ma relativo allo schema (HTML5)
-      valid_children : "+p[iframe],figure[img|figcaption],-figcaption[h2|h3|h4|figure],-h2[div,img,p,iframe],-h3[div,img,p,iframe],-h4[div,img,p,iframe],-p[img],-li[h2|h3|h4|p|blockquote]"
+      valid_children : "+p[iframe],figure[img|figcaption],-figcaption[h2|h3|h4|figure],-h2[div,img,p,iframe],-h3[div,img,p,iframe],-h4[div,img,p,iframe],-p[img],-li[h2|h3|h4|p|blockquote],div[iframe]"
 
     });
   </script>
@@ -336,6 +342,10 @@
     <figure class="miniature-container"><img src="https://i.pravatar.cc/300?img=7">
     <figcaption><strong><u>Titolo</u></strong><br><br>Descrizione</figcaption>
     </figure>
+
+    <hr>
+    <h3>Media embed</h3>
+    <p><iframe src="https://www.youtube.com/embed/yKenAJfr818" allowfullscreen="allowfullscreen"></iframe></p>
 
     <hr>
 

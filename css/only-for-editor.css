@@ -6,3 +6,7 @@
 .content-right figure {
   background: #fee;
 }
+
+.mce-preview-object {
+  position: relative;
+}
