@@ -91,7 +91,7 @@
 
       // menu e toolbar
       menubar: false,
-      toolbar1: 'code fullscreen | bold italic underline strikethrough blockquote | superscript subscript | styleselect | charmap | removeformat',
+      toolbar1: 'code fullscreen | bold italic underline strikethrough | superscript subscript | styleselect | charmap | removeformat',
       toolbar2: 'undo redo | numlist bullist | hr | link unlink anchor | image media table template',
 
       // toolbar mobile
@@ -178,6 +178,7 @@
           title: "Blockquote",
           block: "blockquote"
         },
+        /*
         {
           title: 'Evidenzia celle tabella',
         },
@@ -193,7 +194,7 @@
           classes: 'sfondoazzurro',
           exact: true
         }
-
+        */
       ],
 
       keep_styles: false,
@@ -228,13 +229,12 @@
     <h2>Questo è un h2.</h2>
     <h3>Questo è un h3.</h3>
     <h4>Questo è un h4.</h4>
-    <p>Questo è un paragrafo. <span class="evidenza_rosso" style="color: #ff0000;">Questo è evidenziato rosso.</span></p>
+    <p>Questo è un paragrafo. Questo è evidenziato rosso.</p>
 
     <p>Questo è un paragrafo un po' lungo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius varius elit, ut lobortis velit cursus ut. Praesent quis libero dictum, <a href="https://www.unifi.it/" target="_blank" rel="noopener">questo è un link </a>tristique ipsum ut, lobortis mi. Suspendisse a mollis quam. Aenean eu erat vitae massa porttitor posuere. Suspendisse non tempus tortor. Interdum et malesuada fames ac ante ipsum primis <a href="https://www.google.com/" target="_blank" rel="noopener">questo è un link con icona </a>. Mauris lacinia libero in nibh gravida, vitae euismod ligula vulputate.</p>
-    <p>E questo è un altro. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. <span class="evidenza_blu">Questo è evidenziato blu.</span> Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
+    <p>E questo è un altro. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
 
-    <blockquote><p>Questo è un blockquote. Aenean eu erat vitae massa porttitor posuere. Suspendisse non tempus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris lacinia libero in nibh gravida, vitae euismod ligula vulputate.</p>
-    <p><span class="evidenza_blu">Questo è evidenziato blu.</span></p></blockquote>
+    <blockquote>Questo è un blockquote. Aenean eu erat vitae massa porttitor posuere. Suspendisse non tempus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris lacinia libero in nibh gravida, vitae euismod ligula vulputate.</blockquote>
 
     <hr>
 
@@ -345,7 +345,7 @@
     <h3>Esempi di gatti</h3>
 
     <p><img src="http://placekitten.com/g/500/300" alt="gatto"></p>
-    <p>Questo era un gatto a tutta larghezza. E questo è un paragrafo. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. <span class="evidenza_blu">Questo è evidenziato blu.</span> Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
+    <p>Questo era un gatto a tutta larghezza. E questo è un paragrafo. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
 
 
     <figure class="with-caption"><img src="http://placekitten.com/g/500/250" alt="gatto">
@@ -370,7 +370,7 @@
 
     <hr>
     <h3>Media embed</h3>
-    <p><iframe src="https://www.youtube.com/embed/yKenAJfr818" allowfullscreen="allowfullscreen"></iframe></p>
+    <div class="iframe-container"><iframe src="https://www.youtube.com/embed/yKenAJfr818" allowfullscreen="allowfullscreen"></iframe></div>
 
     <hr>
 
@@ -415,7 +415,7 @@
     <h4>Questo è un h4 seguito da un p.</h4>
     <p>Questo è un paragrafo un po' lungo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius varius elit, ut lobortis velit cursus ut. Praesent quis libero dictum, tristique ipsum ut, lobortis mi. Suspendisse a mollis quam. Aenean eu erat vitae massa porttitor posuere. Suspendisse non tempus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris lacinia libero in nibh gravida, vitae euismod ligula vulputate.</p>
     <h4>E un altro.</h4>
-    <p>E questo è un altro. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. Questo è evidenziato blu.</span> Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
+    <p>E questo è un altro. Maecenas vitae felis elit. Vestibulum arcu orci, posuere non sodales sit amet, tincidunt quis ipsum. In nec elit leo. Questo è evidenziato blu. Curabitur eget leo ipsum. Pellentesque pretium nunc quis sapien volutpat pellentesque. Donec a nibh sapien. Fusce eget laoreet ligula, ut pulvinar leo.</p>
 
     <h2>Questo è un h2 seguito da un h3 .</h2>
     <h3>Questo è un h3 seguito da un p.</h3>
