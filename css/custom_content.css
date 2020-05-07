@@ -127,3 +127,23 @@ background-color: lightblue;
     bottom: 20px;
   }
 }
+
+
+
+
+/* STILI IFRAME */
+
+div.iframe-container {
+  margin-top: 10px;
+  height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+div.iframe-container iframe {
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

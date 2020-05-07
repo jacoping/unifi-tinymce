@@ -8,5 +8,5 @@
 }
 
 .mce-preview-object {
-  position: relative;
+  position: static;
 }
