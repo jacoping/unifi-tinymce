@@ -96,14 +96,18 @@ background-color: lightblue;
 .content-right figure.miniature-container img,
 .content-right figure.with-caption img
  {
-  margin-bottom: 1em;
   margin-top: 0;
   display: block;
+}
+
+.content-right figure.miniature-container img {
+  width: 50%;
 }
 
 @media screen and (min-width: 768px) {
   .content-right figure.miniature-container img {
     width: 200px;
+    margin-bottom: 1em;
     float: left;
     margin-left: 40px;
     margin-right: 40px;
