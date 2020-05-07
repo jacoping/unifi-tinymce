@@ -219,9 +219,39 @@
 
   <div id="container">
     <header style="margin-top: 30px">
-      <img src="./logo_unifi.svg" style="width: 150px" >
-      <h2 style="margin: 20px 0 30px;">Utility per testing editor e stili pagine.</h2>
+      <img src="./logo_unifi.svg" style="width: 150px; margin-left: 5px" >
+      <h2 style="margin: 20px 0 0;">Utility per testing editor e stili pagine.</h2>
+      <p style="font-weight: 300; font-size: 80%; margin-bottom: 30px"> L'editor presenta una raccolta completa degli stili disponibili e delle loro combiinazioni. È possibile usare l'editor per provare gli stili e le funzionalità. Il risultato apparirà in tempo reale nel rettangolo in basso. Per maggiori informazioni sugli stili <strong> <a style="text-decoration: underline !important" id="moreinfo" href="#">cliccare qui</a> </strong>.</p>
     </header>
+
+    <dialog id="moreinfo_dialog" class="content-right" style="width: 700px; padding: 20px;">
+      <form method="dialog">
+      <h3> Informazioni sugli stili:</h3>
+      <p>Usando la barra degli strumenti si possono inserire e modificare link, immagini, video e altri media, tabelle.</p>
+      <p>Tramite il bottone "template" (simbolo del timbro) è possibile inserire due template per immagini con didascalia. Una volta inserito il template per modificare l'immagine usare l'apposito bottone nella barra degli strumenti.</p>
+
+      <h3>Modifica diretta dell'HTML</h3>
+      <p><br>Nella modifica diretta dell'HTML i tag utilizzabili sono:</p>
+      <ul>
+        <li>h2, h3, h4, p, blockquote, hr</li>
+        <li>a, em, strong, u, del, sub, sup, br</li>
+        <li>ol, ul, li</li>
+        <li>figure (img + figcaption)</li>
+        <li>iframe</li>
+        <li>table (+ relativi)</li>
+      </ul>
+      </ul>
+      <button value="cancel">Chiudi</button>
+      </form>
+    </dialog>
+
+    <script type="text/javascript">
+      document.querySelector('#moreinfo').addEventListener('click', function(){
+        document.getElementById('moreinfo_dialog').showModal();
+      });
+    </script>
+
+
 
   <textarea class="editor-area content-right">
 
