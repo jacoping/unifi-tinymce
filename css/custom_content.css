@@ -20,7 +20,6 @@ CLASSE DI PROVA PER IMPOSTAZIONI EDITOR - NON IMPLEMENTARE IN PRODUZIONE
 */
 
 
-
 .sfondorosso {
 background-color: red;
 }
@@ -30,7 +29,7 @@ background-color: lightblue;
 
 
 /*
-  STILI IMMAGINI
+  STILI DA RIMUOVERE
 
 
 .content-right p, .content-right h1, .content-right h2, .content-right h3, .content-right h4, .content-right table, .content-right blockquote, .content-right div {
@@ -82,7 +81,7 @@ background-color: lightblue;
 */
 
 
-/* NUOVI STILI IMMAGINI */
+/* STILI IMMAGINI */
 
 .content-right figure {
   clear: both;
@@ -127,9 +126,6 @@ background-color: lightblue;
     bottom: 20px;
   }
 }
-
-
-
 
 /* STILI IFRAME */
 
