@@ -12,6 +12,19 @@
   margin: auto;
 }
 
+.content-right figure {
+  background: #fee;
+}
+
+.mce-preview-object {
+  position: static;
+}
+/* FINE AGGIUNTA DI JACOPO */
+
+/* => JACOPO HA COMMENTATO QUALCOSA SOTTO, CERCA "JACOPO" */
+
+
+
 
 .mce-content-body .mce-item-anchor {
   background: transparent url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D'8'%20height%3D'12'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M0%200L8%200%208%2012%204.09117821%209%200%2012z'%2F%3E%3C%2Fsvg%3E%0A") no-repeat center;
@@ -600,7 +613,7 @@ pre[class*=language-] {
   background-image: url(data:image/gif;base64,R0lGODlhDQAKAIABALu7u////yH5BAEAAAEALAAAAAANAAoAAAIXjI8GybEOnmOvUoWznTqeuEjNSCqeGRUAOw==)
 }
 
-/*
+/* QUESTO È STATO COMMENTATO DA JACOPO
 .mce-visualblocks:not([dir=rtl]) address, .mce-visualblocks:not([dir=rtl]) article, .mce-visualblocks:not([dir=rtl]) aside, .mce-visualblocks:not([dir=rtl]) blockquote, .mce-visualblocks:not([dir=rtl]) div:not([data-mce-bogus]), .mce-visualblocks:not([dir=rtl]) dl, .mce-visualblocks:not([dir=rtl]) figcaption, .mce-visualblocks:not([dir=rtl]) figure, .mce-visualblocks:not([dir=rtl]) h1, .mce-visualblocks:not([dir=rtl]) h2, .mce-visualblocks:not([dir=rtl]) h3, .mce-visualblocks:not([dir=rtl]) h4, .mce-visualblocks:not([dir=rtl]) h5, .mce-visualblocks:not([dir=rtl]) h6, .mce-visualblocks:not([dir=rtl]) hgroup, .mce-visualblocks:not([dir=rtl]) ol, .mce-visualblocks:not([dir=rtl]) p, .mce-visualblocks:not([dir=rtl]) pre, .mce-visualblocks:not([dir=rtl]) section, .mce-visualblocks:not([dir=rtl]) ul {
   margin-left: 3px
 }
