@@ -16,8 +16,14 @@
   background: #fee;
 }
 
+/* correzione preview iframe full width  */
 .mce-preview-object {
   position: static;
+}
+
+/* correzione dialog template */
+body.content-right {
+  margin-top: 0;
 }
 /* FINE AGGIUNTA DI JACOPO */
 
