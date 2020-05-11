@@ -46,7 +46,6 @@ colgroup
 
 
 ## figli ammessi
-
 il primo livello deve essere un tag block
 
 dentro i tag block ci possono essere tag inline (vedi sopra)
@@ -82,11 +81,8 @@ figure.with-caption
 ## stili in linea ammessi
 list-style-type
 
-tutti gli altri stili in linea devono essere rimossi
-
 
 ## altre trasformazioni
+span style="text-decoration:underline" => u
 
-<span(style="text-decoration:underline")> => <u>
-
-<span(style="text-decoration:strikethrough")> => <del>
+span style="text-decoration:strikethrough" => del
