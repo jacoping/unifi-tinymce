@@ -25,6 +25,10 @@
 body.content-right {
   margin-top: 0;
 }
+
+span.mce-preview-object {
+  position: static;
+}
 /* FINE AGGIUNTA DI JACOPO */
 
 /* => JACOPO HA COMMENTATO QUALCOSA SOTTO, CERCA "JACOPO" */
