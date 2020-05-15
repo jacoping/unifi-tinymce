@@ -25,13 +25,9 @@
       margin-top: 30px;
     }
 
-
-
   </style>
 
-  <!--
-  <link rel="stylesheet" href="https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027">
-  -->
+
   <link rel="stylesheet" href="css/custom_content.css">
 
   <script src="./tinymce5/tinymce.min.js"></script>
@@ -45,7 +41,10 @@
       selector: '.editor-area',
       init_instance_callback: function(editor) {
         update();
+
+        // aggiorna il preview in tempo reale
         editor.on('Change', update);
+
         editor.on('Change', function(data){
           // wrappa tutti gli iframe con un div con classe iframe-container
           tinymce.activeEditor.dom.select('iframe').forEach(function(el){
@@ -177,23 +176,6 @@
           title: "Blockquote",
           block: "blockquote"
         },
-        /*
-        {
-          title: 'Evidenzia celle tabella',
-        },
-        {
-          title: "Evidenziato rosso",
-          selector: "td",
-          classes: 'sfondorosso',
-          exact: true
-        },
-        {
-          title: "Evidenziato azzurro",
-          selector: "td",
-          classes: 'sfondoazzurro',
-          exact: true
-        }
-        */
       ],
 
       keep_styles: false,
