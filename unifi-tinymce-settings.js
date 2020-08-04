@@ -220,3 +220,74 @@ var settings_focus = {
   valid_children: "+p[iframe],figure[img|figcaption],-figcaption[h2|h3|h4|figure],-h2[div,img,p,iframe],-h3[div,img,p,iframe],-h4[div,img,p,iframe],-p[img],-li[h2|h3|h4|p|blockquote],+div[iframe]"
 
 }
+
+
+
+
+var settings_leftinfo = {
+
+  width: 960,
+  height: 300,
+  content_css: "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027",
+  body_class: 'content-right',
+  language: "it",
+  schema: "html5",
+  skin: "oxide-jacopo",
+  entity_encoding: "raw",
+  element_format: "html",
+
+  // plugins attivi
+  plugins: 'advlist anchor charmap code contextmenu link lists searchreplace table visualblocks visualchars wordcount powerpaste image',
+
+  // menu e toolbar
+  menubar: false,
+  toolbar1: ' bold italic underline strikethrough | superscript subscript | styleselect | charmap | removeformat | numlist bullist | hr | link unlink | image | undo redo | code',
+
+  // toolbar mobile
+  mobile: {
+    theme: 'mobile'
+  },
+
+  // opzioni plugin
+  powerpaste_allow_local_images: false,
+  powerpaste_word_import: "clean",
+  powerpaste_html_import: "clean",
+
+  visualblocks_default_state: true,
+
+  link_title: true,
+
+
+
+  formats: {
+    underline: {
+      inline: 'u'
+    },
+    strikethrough: {
+      inline: 'del'
+    },
+  },
+
+  style_formats: [{
+      title: "Titolo secondario (h3)",
+      block: "h3"
+    },
+    {
+      title: "Paragrafo",
+      block: "p"
+    },
+
+  ],
+
+  keep_styles: false,
+
+  // tag e attributi consentiti
+  valid_elements: '@[id|style|src|alt|href|title|target],#p,-span,h3,h4,+a,-em,-strong,u,del,-ol,-ul,-li,-sub,-sup,br,img',
+
+  // stili in linea consentiti
+  valid_styles: 'list-style-type',
+
+  // questo non è assoluto, ma relativo allo schema (HTML5)
+  valid_children: "+p[iframe],figure[img|figcaption],-figcaption[h2|h3|h4|figure],-h2[div,img,p,iframe],-h3[div,img,p,iframe],-h4[div,img,p,iframe],-p[img],-li[h2|h3|h4|p|blockquote],+div[iframe]"
+
+}

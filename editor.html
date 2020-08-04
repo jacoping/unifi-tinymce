@@ -8,16 +8,16 @@
 
 
   <style media="screen">
-
-  #container {
-  }
-
-  @media screen and (min-width: 768px) {
     #container {
-      width: 960px;
-      margin: auto;
+      padding-bottom: 300px;
     }
-  }
+
+    @media screen and (min-width: 768px) {
+      #container {
+        width: 960px;
+        margin: auto;
+      }
+    }
 
     #destinazione {
       border: 1px solid red;
@@ -25,7 +25,6 @@
       margin-top: 30px;
       padding: 10px;
     }
-
   </style>
 
 
@@ -41,15 +40,17 @@
 
   <!-- QUESTO SCRIPT GENERA GLI EDITOR NELLE TEXT-AREA -->
   <script type="text/javascript">
-
-  var editor_contenuto = new tinymce.Editor('editor-contenuto',
+    var editor_contenuto = new tinymce.Editor('editor-contenuto',
       settings_contenuto, tinymce.EditorManager);
-  editor_contenuto.render();
+    editor_contenuto.render();
 
-  var editor_focus = new tinymce.Editor('editor-focus',
+    var editor_focus = new tinymce.Editor('editor-focus',
       settings_focus, tinymce.EditorManager);
-  editor_focus.render();
+    editor_focus.render();
 
+    var editor_leftinfo = new tinymce.Editor('editor-leftinfo',
+      settings_leftinfo, tinymce.EditorManager);
+    editor_leftinfo.render();
   </script>
 
 
@@ -61,19 +62,24 @@
 
   <div id="container">
     <header style="margin-top: 30px">
-      <img src="./logo_unifi.svg" style="width: 150px; margin-left: 5px" >
+      <img src="./logo_unifi.svg" style="width: 150px; margin-left: 5px">
     </header>
 
     <h2 style="margin: 60px 0 0;">Contenuto</h2>
 
 
-  <textarea id="editor-contenuto" class="content-right" >
-  </textarea>
+    <textarea id="editor-contenuto" class="content-right">
+    </textarea>
 
     <h2 style="margin: 100px 0 0;">Focus</h2>
 
-  <textarea id="editor-focus" class="content-right" >
-  </textarea>
+    <textarea id="editor-focus" class="content-right">
+    </textarea>
+
+    <h2 style="margin: 100px 0 0;">Left-info</h2>
+
+    <textarea id="editor-leftinfo" class="content-right">
+    </textarea>
 
   </div>
 </body>
