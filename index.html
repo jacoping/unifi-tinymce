@@ -95,7 +95,7 @@
     <header style="margin-top: 30px">
       <img src="./logo_unifi.svg" style="width: 150px; margin-left: 5px" >
       <h2 style="margin: 20px 0 0;">Utility per testing editor e stili pagine.</h2>
-      <p style="font-weight: 300; font-size: 80%; margin-bottom: 30px"> L'editor presenta una raccolta completa degli stili disponibili e delle loro combiinazioni. È possibile usare l'editor per provare gli stili e le funzionalità. Il risultato apparirà in tempo reale nel rettangolo in basso con il bordo rosso. Per maggiori informazioni <strong> <a style="text-decoration: underline !important" id="moreinfo" href="#">cliccare qui</a> </strong>.</p>
+      <p style="font-weight: 300; font-size: 80%; margin-bottom: 30px"> L'editor presenta una raccolta completa degli stili disponibili e delle loro combiinazioni. È possibile usare l'editor per provare gli stili e le funzionalità. Il risultato apparirà in tempo reale nel rettangolo in basso con il bordo rosso. Per maggiori informazioni <strong> <a style="text-decoration: underline !important" class="moreinfo" href="#">cliccare qui</a> </strong>.</p>
     </header>
 
   <textarea id="editor-area" class="content-right">
@@ -335,7 +335,7 @@
     let dialog = document.querySelector('#moreinfo_dialog');
     dialog.style.display = "none";
 
-    document.querySelector('#moreinfo').addEventListener('click', function() {
+    document.querySelector('.moreinfo').addEventListener('click', function() {
       dialog.style.display = "block";
     });
 
