@@ -11,7 +11,8 @@ var settings_contenuto = {
           container.classList.add("iframe-container");
           tinymce.activeEditor.dom.replace(container, realparent, true);
         }
-      });
+      })
+
       // elimina tuttu i div che non contengono un iframe e li trasforma in p vuoti (con un br dentro) + pulisce i div
       tinymce.activeEditor.dom.select('div').forEach(function(el) {
         if (el.classList.contains('iframe-container') && el.getElementsByTagName('SPAN').length > 0 && el.getElementsByTagName('SPAN')[0].classList.contains('mce-object-iframe') && el.getElementsByTagName('SPAN')[0].firstChild.tagName == 'IFRAME') {
@@ -30,12 +31,14 @@ var settings_contenuto = {
           tinymce.activeEditor.dom.replace(emptyp, el, false);
         }
       })
+
+
     });
   },
 
   width: 960,
   height: 600,
-  content_css: "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1578566027",
+  content_css: "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1587717583",
   body_class: 'content-right',
   language: "it",
   schema: "html5",
@@ -96,13 +99,18 @@ var settings_contenuto = {
 
   templates: [{
       title: 'Immagine con didascalia',
-      description: 'This is my template.',
+      description: 'Gallery di immagini grandi.',
       content: '<figure class="with-caption"><img src="https://via.placeholder.com/2x1"><figcaption>Didascalia</figcaption></figure><p></p>'
     },
     {
       title: 'Miniature',
-      description: 'This is my template.',
+      description: 'Gallery di immagini piccole.',
       content: '<figure class="miniature-container"><img src="https://via.placeholder.com/1"><figcaption><strong><u>Titolo</u></strong><br>Descrizione</figcaption></figure><p></p>'
+    },
+    {
+      title: 'Fisarmonica',
+      description: 'Sezione di contenuto a scomparsa',
+      content: '<section class="fisarmonica"><h3>Titolo fisarmonica</h3><p>Contenuto fisarmonica</p></section>'
     }
   ],
 
@@ -141,7 +149,7 @@ var settings_contenuto = {
   keep_styles: false,
 
   // tag e attributi consentiti
-  valid_elements: '@[id|style|src|alt|href|title|target],#p,-span,h2,h3,h4,blockquote,+a,-em,-strong,div[class],figure[class],img,figcaption,iframe[allowfullscreen],u,del,table,thead,tbody,tfoot,th,tr,td,col,colgroup,-ol,-ul,-li,-sub,-sup,br,hr',
+  valid_elements: '@[id|style|src|alt|href|title|target],#p,-span,h2,h3,h4,blockquote,section[class],+a,-em,-strong,div[class],figure[class],img,figcaption,iframe[allowfullscreen],u,del,table,thead,tbody,tfoot,th,tr,td,col,colgroup,-ol,-ul,-li,-sub,-sup,br,hr',
 
   // stili in linea consentiti
   valid_styles: 'list-style-type',

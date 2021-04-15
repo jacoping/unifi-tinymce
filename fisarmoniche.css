@@ -1,0 +1,50 @@
+.fisarmonica {
+  margin-bottom: 1em;
+}
+
+.fisarmonica * {
+  display: none;
+}
+
+.fisarmonica h3:first-child {
+  display: block;
+}
+
+.fisarmonica h3::after {
+  content: " +"
+}
+
+.fisarmonica.open h3::after {
+  content: " -"
+}
+
+.fisarmonica.open p,
+.fisarmonica.open ul,
+.fisarmonica.open ol
+{
+  display: block;
+  padding-left: 1em;
+}
+
+.fisarmonica.open li {
+  display: list-item;
+}
+
+.fisarmonica.open h4 {
+  display: block;
+  padding-left: 1em;
+  padding-top: 1em;
+}
+
+
+
+
+.fisarmonica.open a,
+.fisarmonica.open em,
+.fisarmonica.open strong,
+.fisarmonica.open u,
+.fisarmonica.open del,
+.fisarmonica.open strong,
+{
+  display: inline;
+}
