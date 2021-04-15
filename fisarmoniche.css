@@ -1,50 +1,46 @@
 .fisarmonica {
   margin-bottom: 1em;
+  padding: .5em;
+  background-color: #eee;
 }
 
-.fisarmonica * {
+.fisarmonica > * {
   display: none;
 }
 
-.fisarmonica h3:first-child {
+.fisarmonica > h3:first-child,
+.fisarmonica > div
+ {
   display: block;
 }
 
-.fisarmonica h3::after {
-  content: " +"
+.fisarmonica div h2,
+.fisarmonica div h3 {
+  display: none;
 }
 
-.fisarmonica.open h3::after {
-  content: " -"
+.fisarmonica h3 {
+  margin-left: -.3em;
 }
 
-.fisarmonica.open p,
-.fisarmonica.open ul,
-.fisarmonica.open ol
-{
-  display: block;
+.fisarmonica h3::before  {
   padding-left: 1em;
+  content: "\276F";
+  display: inline-block;
+  transition: all .35s;
+  transform: rotate(0deg) translateX(-.5em);
 }
 
-.fisarmonica.open li {
-  display: list-item;
+.fisarmonica.open h3::before {
+  transform: rotate(90deg) translateX(-.3em) ;
 }
 
-.fisarmonica.open h4 {
-  display: block;
-  padding-left: 1em;
-  padding-top: 1em;
+.fisarmonica div {
+  max-height: 0;
+  transition: max-height .5s;
+  overflow: hidden;
 }
 
-
-
-
-.fisarmonica.open a,
-.fisarmonica.open em,
-.fisarmonica.open strong,
-.fisarmonica.open u,
-.fisarmonica.open del,
-.fisarmonica.open strong,
-{
-  display: inline;
+.fisarmonica.open div {
+  max-height: 100vh;
 }

@@ -1,3 +1,6 @@
+/* QUESTI ERANO I SETTINGS VECCHI - SONO STATI MODIFICATI RIMUOVENDO IL CONTROLLO DEI DIV AD APRILE 2021 PER INSERIRE LE FISARMONICHE */
+
+
 var settings_contenuto = {
 
   init_instance_callback: function(editor) {
@@ -12,23 +15,27 @@ var settings_contenuto = {
           tinymce.activeEditor.dom.replace(container, realparent, true);
         }
       })
-    });
 
-    editor.on('KeyDown', function(e) {
-      if (e.keyCode == 27) {
-        let editor = tinyMCE.activeEditor
-        const dom = editor.dom
-        const parentBlock = tinyMCE.activeEditor.selection.getSelectedBlocks()[0]
-        const containerBlock = parentBlock.parentNode.nodeName == 'BODY' ? dom.getParent(parentBlock, dom.isBlock) : dom.getParent(parentBlock.parentNode, dom.isBlock)
-        let newBlock = tinyMCE.activeEditor.dom.create('p')
-        newBlock.innerHTML = '<br data-mce-bogus="1">';
-        dom.insertAfter(newBlock, containerBlock)
-        let rng = dom.createRng();
-        newBlock.normalize();
-        rng.setStart(newBlock, 0);
-        rng.setEnd(newBlock, 0);
-        editor.selection.setRng(rng);
-      }
+      // elimina tuttu i div che non contengono un iframe e li trasforma in p vuoti (con un br dentro) + pulisce i div
+      tinymce.activeEditor.dom.select('div').forEach(function(el) {
+        if (el.classList.contains('iframe-container') && el.getElementsByTagName('SPAN').length > 0 && el.getElementsByTagName('SPAN')[0].classList.contains('mce-object-iframe') && el.getElementsByTagName('SPAN')[0].firstChild.tagName == 'IFRAME') {
+          if (el.childNodes.length > 0) {
+            // div is dirty: clean it
+            el.childNodes.forEach(function(child) {
+              if (child.tagName !== 'SPAN') {
+                el.removeChild(child);
+              }
+            })
+          }
+        } else {
+          // div is not an iframe container: delete it
+          var emptyp = document.createElement('p');
+          emptyp.innerHTML = '<br data-mce-bogus="1">';
+          tinymce.activeEditor.dom.replace(emptyp, el, false);
+        }
+      })
+      */
+
     });
   },
 
