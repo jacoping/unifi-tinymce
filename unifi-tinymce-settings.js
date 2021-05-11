@@ -109,9 +109,9 @@ var settings_contenuto = {
       content: '<section class="fisarmonica open"><h3>Titolo fisarmonica</h3><div><p>Contenuto fisarmonica</p></div></section>'
     },
     {
-      title: 'Timeline',
+      title: 'Linea del tempo (timeline)',
       description: 'Sezione di contenuto a scomparsa',
-      content: '<section class="timeline"><section class="fisarmonica open"><h3>Titolo timeline</h3><div><p>Contenuto timeline</p></div></section></section>'
+      content: '<section class="timeline"><section class="fisarmonica open"><h3>Titolo timeline 1</h3><div><p>Contenuto timeline 1</p></div></section><section class="fisarmonica"><h3>Titolo timeline 2</h3><div><p>Contenuto timeline 2</p></div></section></section>'
     }
   ],
 
