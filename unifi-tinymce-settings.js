@@ -34,7 +34,7 @@ var settings_contenuto = {
 
   width: 960,
   height: 600,
-  content_css: "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1587717583",
+  content_css: "https://dipartimento.didacommunicationlab.it/dist/app.css?v=1587717583, local.css",
   body_class: 'content-right',
   language: "it",
   schema: "html5",
@@ -106,7 +106,7 @@ var settings_contenuto = {
     {
       title: 'Fisarmonica',
       description: 'Sezione di contenuto a scomparsa',
-      content: '<section class="fisarmonica open"><h3>Titolo fisarmonica</h3><div><p>Contenuto fisarmonica</p></div></section>'
+      content: '<section class="fisarmonica"><h3>Titolo fisarmonica</h3><div><p>Contenuto fisarmonica</p></div></section>'
     },
     {
       title: 'Linea del tempo (timeline)',
